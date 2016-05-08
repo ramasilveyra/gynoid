@@ -1,0 +1,21 @@
+{
+  "name": "gynoid",
+  "version": "0.0.1",
+  "description": "Auth0 NodeJs ChatOps Service",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["chatops", "auth0", "slackbot", "slack", "bot"],
+  "author": "Verlic",
+  "license": "MIT",
+  "dependencies": {
+    "async": "^2.0.0-rc.4",
+    "npm": "^2.15.5",
+    "request": "^2.72.0",
+    "slack-robot": "^3.2.0"
+  },
+  "devDependencies": {
+    "dotenv": "^2.0.0"
+  }
+}

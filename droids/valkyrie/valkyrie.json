@@ -1,0 +1,12 @@
+{
+  "name": "valkyrie",
+  "actions": [
+    {
+      "aliases": [
+        "hello :name([a-z\\-]+)"
+      ],
+      "webtask": "https://webtask.it.auth0.com/api/run/wt-hernan_meydac-auth0_com-0/sample-wt?webtask_no_cache=1",
+      "premessage": "Quering Webtask sample..."
+    }
+  ]
+}

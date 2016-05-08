@@ -1,0 +1,23 @@
+{
+  "name": "mandrill",
+  "script": "mandrill/mandrill.js",
+  "actions": [
+    {
+      "aliases": [
+        "get series for :email([a-z\\-]+)",
+        "get emails for :email([a-z\\-]+)",
+        "get :email([a-z\\-]+)"
+      ],
+      "function": "getSeries",
+      "acls": {
+        "dm": true,
+        "channels": ["automation-logs"]
+      },
+      "premessage": "Quering Mandril..."
+    }
+  ],
+  "dependencies": {
+    "mandrill-api": "^1.0.45",
+    "moment": "^2.10.3"
+  }
+}
