@@ -9,6 +9,7 @@
   "keywords": ["chatops", "auth0", "slackbot", "slack", "bot"],
   "author": "Verlic",
   "license": "MIT",
+  "repository": "https://github.com/auth0/gynoid",
   "dependencies": {
     "async": "^2.0.0-rc.4",
     "npm": "^2.15.5",

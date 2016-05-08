@@ -1,13 +1,8 @@
 // TODO: Refactor this. Testing purposes only.
 
-var env = require('dotenv');
-env.load({silent:true});
-
 var async = require('async');
-
 var Matrix = require('./matrix');
-var matrix = new Matrix(process.env.SLACK_TOKEN);
-
+var matrix = new Matrix();
 var mandrillDroid = require('./droids/mandrill/mandrill.json');
 var valkyrieDroid = require('./droids/valkyrie/valkyrie.json');
 
