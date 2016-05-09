@@ -1,6 +1,5 @@
 module.exports = {
   dm: function(req, res, next) {
-    console.log('dm check');
     if (req.channel.type === 'dm') {
       return next();
     }

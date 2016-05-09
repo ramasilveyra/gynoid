@@ -4,9 +4,9 @@
   "actions": [
     {
       "aliases": [
-        "get series for :email([a-z\\-]+)",
-        "get emails for :email([a-z\\-]+)",
-        "get :email([a-z\\-]+)"
+        "get series for :email([^\\s]+)",
+        "get emails for :email([^\\s]+",
+        "get :email([^\\s]+)"
       ],
       "function": "getSeries",
       "acls": {

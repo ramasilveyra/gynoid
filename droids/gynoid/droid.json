@@ -1,0 +1,26 @@
+{
+  "name": "gynoid",
+  "script": "index.js",
+  "actions": [
+    {
+      "aliases": ["install droid from :repo([^\\s]+)"],
+      "function": "installDroid",
+      "acls": {
+        "dm": true
+      },
+      "premessage": "Installing Droid..."
+    },
+    {
+      "aliases": ["start droid :name([^\\s]+)"],
+      "function": "startDroid",
+      "acls": {
+        "dm": true
+      },
+      "premessage": "Starting Droid..."
+    }
+  ],
+  "dependencies": {
+    "npm": "^2.15.5",
+    "nodegit": "^0.13.0"
+  }
+}

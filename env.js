@@ -3,10 +3,6 @@
 var dotenv = require('dotenv');
 dotenv.load({silent:true});
 
-var env = {};
-
-env.VALKYRIE_BOT_TOKEN = process.env.VALKYRIE_BOT_TOKEN;
-env.MANDRILL_BOT_TOKEN = process.env.MANDRILL_BOT_TOKEN;
-env.MANDRILL_KEY = process.env.MANDRILL_KEY;
+var env = process.env; // TODO: Refactor
 
 module.exports = env;

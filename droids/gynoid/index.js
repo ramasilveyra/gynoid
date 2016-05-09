@@ -1,12 +1,11 @@
+var git = require('nodegit');
+var githubUrl = 'git@github.com:';
+
 var SlackDroid = require('slack-robot');
 var acls = require('./acls');
 var npm = require('npm');
 var webtaskRunner = require('./webtask-runner');
-var env = require('../env');
-
-var Matrix = function() {
-  this.droids = {};
-};
+var env = require('../../env');
 
 function addListeners(spec, droid) {
   // Add Listener functions to this droid
@@ -72,31 +71,24 @@ function installPackages(dependencies, callback) {
   });
 }
 
-Matrix.prototype.addDroid = function(specPath) {
-  var matrix = this;
+function addDroid(specPath, callback) {
   var spec = require(specPath + '/droid.json');
-  console.log('Adding new droid: ', spec.name);
+  console.log('Adding new droid:', spec.name);
 
   installPackages(spec.dependencies, function(err) {
     if (err) {
       return console.error(err);
     }
 
-    // Check if droid is already registered or if it is an update
-    if (!matrix.droids[spec.name]){
-      // Look for Slack Token - By convention {NAME}_BOT_TOKEN
-      var token = env[spec.name.toUpperCase() + '_BOT_TOKEN'];
-      matrix.droids[spec.name] = {
-        listener: new SlackDroid(token)
-      };
+    // Look for Slack Token - By convention {NAME}_BOT_TOKEN
+    var token = env[spec.name.toUpperCase() + '_BOT_TOKEN'];
+    var droid = {
+      listener: new SlackDroid(token)
+    };
 
-      if (spec.script) {
-        matrix.droids[spec.name].functions = require(specPath + '/' + spec.script);
-      }
+    if (spec.script) {
+      droid.functions = require(specPath + '/' + spec.script);
     }
-
-    var droid = matrix.droids[spec.name];
-    droid.functions._matrix = matrix;
 
     addListeners(spec, droid);
     // By convention, we don't allow bots in General
@@ -107,15 +99,52 @@ Matrix.prototype.addDroid = function(specPath) {
     });
 
     droid.listener.start();
+    if (callback) {
+      return callback();  
+    }
+
   });
+}
+
+module.exports = {
+  installDroid: function(req, res) {
+    var repository = req.params.repo;
+
+    // TODO: Error handling and validation
+    var repoUrl = githubUrl + repository + '.git';
+    var opts = {
+      fetchOpts: {
+        callbacks: {
+          certificateCheck: function() {
+            return 1;
+          },
+          credentials: function(url, userName) {
+            console.log('Credentials', url, userName);
+            return git.Cred.sshKeyFromAgent(userName);
+          }
+        }
+      }
+    };
+
+    console.log('Cloning droid repository...');
+    git.Clone(repoUrl, __dirname + '/../' + repository.split('/')[1], opts)
+      .then(function(repo) {
+        console.log ('Repo', repo);
+        addDroid(__dirname + '/../' + repository.split('/')[1]);
+      })
+      .catch(function(err) {
+        console.error(err);
+        res.text('Unable to install droid from ' + repository + '\n\n```' + err + '```');
+      });
+  },
+  initialize: function() {
+    addDroid(__dirname + '/../gynoid', function() {
+      console.log('Done!');
+    });
+  },
+  startDroid: function(req, res) {
+    addDroid(__dirname + '/../' + req.params.name, function() {
+      res.text('Droid started').send();
+    });
+  }
 };
-
-Matrix.prototype.start = function() {
-  // ignore message from '#general' channel, even if it matches the listener
-  this.robot.ignore('#general');
-
-  // start listening
-  this.robot.start();
-};
-
-module.exports = Matrix;
