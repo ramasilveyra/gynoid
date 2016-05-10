@@ -14,7 +14,9 @@
     "async": "^2.0.0-rc.4",
     "npm": "^2.15.5",
     "request": "^2.72.0",
-    "slack-robot": "^3.2.0"
+    "slack-robot": "auth0/slack-robot",
+    "nodegit": "^0.13.0",
+    "rimraf": "^2.5.2"
   },
   "devDependencies": {
     "dotenv": "^2.0.0"

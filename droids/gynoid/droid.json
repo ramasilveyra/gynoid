@@ -17,10 +17,14 @@
         "dm": true
       },
       "premessage": "Starting Droid..."
+    },
+    {
+      "aliases": ["remove droid :name([^\\s]+)"],
+      "function": "removeDroid",
+      "acls": {
+        "dm": true
+      },
+      "premessage": "Removing Droid..."
     }
-  ],
-  "dependencies": {
-    "npm": "^2.15.5",
-    "nodegit": "^0.13.0"
-  }
+  ]
 }
