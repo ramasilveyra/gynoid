@@ -1,0 +1,21 @@
+{
+  "name": "test-bot",
+  "script": "test-bot.js",
+  "extendable": false,
+  "actions": [
+    {
+      "aliases": [
+        "hello test"
+      ],
+      "function": "helloTest",
+      "premessage": "Calling test..."
+    },
+    {
+      "aliases": [
+        "param test :param([^\\s]+)"
+      ],
+      "function": "paramTest",
+      "premessage": "Calling param test..."
+    }
+  ]
+}

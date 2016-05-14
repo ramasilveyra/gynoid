@@ -1,38 +1,15 @@
 {
   "name": "gynoid",
   "script": "index.js",
+  "extendable": false,
   "actions": [
     {
-      "aliases": ["register :bot([^\\s]+) using :token([^\\s]+)"],
-      "function": "registerDroid",
-      "acls": {
-        "dm": true
-      },
-      "premessage": "Registering droid..."
-    },
-    {
-      "aliases": ["install droid from :repo([^\\s]+)"],
+      "aliases": ["install droid from :repo([^\\s]+) using :token([^\\s]+)"],
       "function": "installDroid",
       "acls": {
         "dm": true
       },
       "premessage": "Installing Droid..."
-    },
-    {
-      "aliases": ["start droid :name([^\\s]+)"],
-      "function": "startDroid",
-      "acls": {
-        "dm": true
-      },
-      "premessage": "Starting Droid..."
-    },
-    {
-      "aliases": ["remove droid :name([^\\s]+)"],
-      "function": "removeDroid",
-      "acls": {
-        "dm": true
-      },
-      "premessage": "Removing Droid..."
     }
   ]
 }
