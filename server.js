@@ -1,4 +1,5 @@
-// TODO: Refactor this. Testing purposes only.
+require('./lib/logs/setup');
+var SlackAdapter = require('slack-robot');
 
-var gynoid = require('./droids/gynoid');
-gynoid.initialize();
+var gynoid = require('./lib/droids/gynoid');
+gynoid.initialize(SlackAdapter);

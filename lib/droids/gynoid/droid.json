@@ -3,6 +3,14 @@
   "script": "index.js",
   "actions": [
     {
+      "aliases": ["register :bot([^\\s]+) using :token([^\\s]+)"],
+      "function": "registerDroid",
+      "acls": {
+        "dm": true
+      },
+      "premessage": "Registering droid..."
+    },
+    {
       "aliases": ["install droid from :repo([^\\s]+)"],
       "function": "installDroid",
       "acls": {
