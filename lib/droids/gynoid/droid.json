@@ -12,6 +12,14 @@
       "premessage": "Installing Droid..."
     },
     {
+      "function": "extendDroid",
+      "aliases": ["install droid from :repo([^\\s]+)"],
+      "acls": {
+        "dm": true
+      },
+      "premessage": "Installing Droid..."
+    },
+    {
       "function": "removeDroid",
       "aliases": ["remove droid :droid([^\\s]+)"],
       "acls": {
