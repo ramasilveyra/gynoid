@@ -1,6 +1,6 @@
 {
   "name": "gynoid",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Auth0 NodeJs ChatOps Service",
   "main": "server.js",
   "scripts": {
@@ -24,8 +24,7 @@
     "npm": "^2.15.5",
     "request": "^2.72.0",
     "rimraf": "^2.5.2",
-    "slack-robot": "auth0/slack-robot",
-    "toml": "^2.3.0",
+    "slack-robot": "auth0/slack-robot"
     "winston": "^2.2.0"
   },
   "devDependencies": {
