@@ -57,6 +57,17 @@ For example:
 install droid from auth0/my-droid using {slack-token}
 ```
 
+## Authoring Droids
+
+To create your own **Droid** you need at least two files:
+
+- **droid.json**: Contains the metadata required to install actions, aliases, and ACLs.
+- **Script**: Your NodeJS file which exports an object with the different "actions" your droid can execute.
+
+See [Mandrill Droid JSON(https://github.com/auth0/mandrill-droid/blob/master/droid.json) and [Mandrill Droid Script](https://github.com/auth0/mandrill-droid/blob/master/mandrill.js) as samples.
+
+
+
 ## Extending Droids
 
 Once a droid is registered, you can extend its functionality. When installing a droid without using a token, **Gynoid** will try to locate an existing bot, clone the repository, and add the new functions. Tell Gynoid the following in Slack to extend a droid:
