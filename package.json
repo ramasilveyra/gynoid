@@ -4,21 +4,34 @@
   "description": "Auth0 NodeJs ChatOps Service",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha lib/droids/gynoid/tests"
   },
-  "keywords": ["chatops", "auth0", "slackbot", "slack", "bot"],
+  "keywords": [
+    "chatops",
+    "auth0",
+    "slackbot",
+    "slack",
+    "bot"
+  ],
   "author": "Verlic",
   "license": "MIT",
   "repository": "https://github.com/auth0/gynoid",
   "dependencies": {
     "async": "^2.0.0-rc.4",
+    "auth0-instrumentation": "auth0/auth0-instrumentation",
+    "bluebird": "^3.3.5",
+    "nodegit": "^0.13.0",
     "npm": "^2.15.5",
     "request": "^2.72.0",
+    "rimraf": "^2.5.2",
     "slack-robot": "auth0/slack-robot",
-    "nodegit": "^0.13.0",
-    "rimraf": "^2.5.2"
+    "toml": "^2.3.0",
+    "winston": "^2.2.0"
   },
   "devDependencies": {
-    "dotenv": "^2.0.0"
+    "chai": "^3.5.0",
+    "dotenv": "^2.0.0",
+    "mocha": "^2.4.5",
+    "sinon": "^1.17.4"
   }
 }

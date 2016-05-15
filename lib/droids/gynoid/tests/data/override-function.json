@@ -1,0 +1,13 @@
+{
+  "name": "test-bot",
+  "script": "override-bot.js",
+  "actions": [
+    {
+      "aliases": [
+        "override test"
+      ],
+      "function": "helloTest",
+      "premessage": "Calling override function test..."
+    }
+  ]
+}
