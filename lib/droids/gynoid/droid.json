@@ -26,6 +26,14 @@
         "dm": true
       },
       "premessage": "Adding key..."
+    },
+    {
+      "function": "removeKey",
+      "aliases": ["remove key :key([^\\s]+)=:value([^\\s]+)"],
+      "acls": {
+        "dm": true
+      },
+      "premessage": "Removing key..."
     }
   ]
 }
