@@ -24,7 +24,7 @@
     "npm": "^2.15.5",
     "request": "^2.72.0",
     "rimraf": "^2.5.2",
-    "slack-robot": "auth0/slack-robot"
+    "slack-robot": "auth0/slack-robot",
     "winston": "^2.2.0"
   },
   "devDependencies": {
