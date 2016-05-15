@@ -64,7 +64,7 @@ To create your own **Droid** you need at least two files:
 - **droid.json**: Contains the metadata required to install actions, aliases, and ACLs.
 - **Script**: Your NodeJS file which exports an object with the different "actions" your droid can execute.
 
-See [Mandrill Droid JSON(https://github.com/auth0/mandrill-droid/blob/master/droid.json) and [Mandrill Droid Script](https://github.com/auth0/mandrill-droid/blob/master/mandrill.js) as samples.
+See [Mandrill Droid JSON](https://github.com/auth0/mandrill-droid/blob/master/droid.json) and [Mandrill Droid Script](https://github.com/auth0/mandrill-droid/blob/master/mandrill.js) as samples.
 
 
 
