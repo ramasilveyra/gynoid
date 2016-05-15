@@ -4,12 +4,28 @@
   "extendable": false,
   "actions": [
     {
-      "aliases": ["install droid from :repo([^\\s]+) using :token([^\\s]+)"],
       "function": "installDroid",
+      "aliases": ["install droid from :repo([^\\s]+) using :token([^\\s]+)"],
       "acls": {
         "dm": true
       },
       "premessage": "Installing Droid..."
+    },
+    {
+      "function": "removeDroid",
+      "aliases": ["remove droid :droid([^\\s]+)"],
+      "acls": {
+        "dm": true
+      },
+      "premessage": "Removing Droid..."
+    },
+    {
+      "function": "addKey",
+      "aliases": ["add key :key([^\\s]+)=:value([^\\s]+)"],
+      "acls": {
+        "dm": true
+      },
+      "premessage": "Adding key..."
     }
   ]
 }
