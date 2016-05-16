@@ -28,6 +28,14 @@
       "premessage": "Removing Droid..."
     },
     {
+      "function": "reloadDroid",
+      "aliases": ["reload :droid([^\\s]+)"],
+      "acls": {
+        "dm": true
+      },
+      "premessage": "Reloading Droid..."
+    },
+    {
       "function": "addKey",
       "aliases": ["add key :key([^\\s]+)=:value([^\\s]+)"],
       "acls": {
