@@ -21,7 +21,7 @@
     },
     {
       "function": "removeDroid",
-      "aliases": ["remove droid :droid([^\\s]+)"],
+      "aliases": ["remove droid :droid([^\\s]+)", "delete droid :droid([^\\s]+)", "unregister droid :droid([^\\s]+)"],
       "acls": {
         "dm": true
       },
@@ -42,6 +42,14 @@
         "dm": true
       },
       "premessage": "Adding key..."
+    },
+    {
+      "function": "listDroids",
+      "aliases": ["list droids", "show installed droids", "get installed droids"],
+      "acls": {
+        "dm": true
+      },
+      "premessage": "Getting the list of droids..."
     },
     {
       "function": "removeKey",
