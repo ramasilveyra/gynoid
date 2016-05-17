@@ -4,6 +4,7 @@
   "description": "Auth0 NodeJs ChatOps Service",
   "main": "server.js",
   "scripts": {
+    "start": "node server.js",
     "test": "mocha lib/droids/gynoid/tests"
   },
   "keywords": [
