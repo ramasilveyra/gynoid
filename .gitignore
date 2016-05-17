@@ -4,6 +4,8 @@ node_modules
 
 .env
 
+gynoid.config.json
+
 npm-debug.log*
 
 # Runtime data
