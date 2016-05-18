@@ -23,7 +23,6 @@
     "bluebird": "^3.3.5",
     "nodegit": "^0.13.0",
     "npm": "^2.15.5",
-    "request": "^2.72.0",
     "rimraf": "^2.5.2",
     "slack-robot": "auth0/slack-robot",
     "winston": "^2.2.0"
