@@ -36,6 +36,22 @@
       "premessage": "Reloading Droid..."
     },
     {
+      "function": "removeDroidExtension",
+      "aliases": ["remove extension :extension([^\\s]+) from :droid([^\\s]+)"],
+      "acls": {
+        "dm": true
+      },
+      "premessage": "Removing Droid Extension..."
+    },
+    {
+      "function": "reloadDroidExtension",
+      "aliases": ["reload extension :repo([^\\s]+) from :droid([^\\s]+)"],
+      "acls": {
+        "dm": true
+      },
+      "premessage": "Reloading Droid Extension..."
+    },
+    {
       "function": "addKey",
       "aliases": ["add key :key([^\\s]+)=:value([^\\s]+)"],
       "acls": {
