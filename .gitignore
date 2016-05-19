@@ -4,6 +4,8 @@ node_modules
 
 .env
 
+lib/droids/marvin-droid/
+
 gynoid.config.json
 
 npm-debug.log*
