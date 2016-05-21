@@ -19,13 +19,11 @@
   "repository": "https://github.com/auth0/gynoid",
   "dependencies": {
     "async": "^2.0.0-rc.4",
-    "auth0-instrumentation": "auth0/auth0-instrumentation",
     "bluebird": "^3.3.5",
     "nodegit": "^0.13.0",
     "npm": "^2.15.5",
     "rimraf": "^2.5.2",
-    "slack-robot": "auth0/slack-robot",
-    "winston": "^2.2.0"
+    "slack-robot": "auth0/slack-robot"
   },
   "devDependencies": {
     "chai": "^3.5.0",
