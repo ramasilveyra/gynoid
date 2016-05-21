@@ -1,5 +1,15 @@
-require('./lib/logs/setup');
-var SlackAdapter = require('slack-robot');
+var gynoid = require('./index');
 
-var gynoid = require('./lib/droids/gynoid');
-gynoid.initialize(SlackAdapter);
+console.log('Loading Droids...');
+gynoid.loadDroids()
+  .then(function() {
+    if (!gynoid.droids['gynoid']) {
+      return gynoid.registerDroid('gynoid', process.env.GYNOID_TOKEN)
+        .then(function() {
+          return gynoid.installFromGitHub('gynoid', process.env.DEFAULT_GYNOID_EXTENSION);
+        });
+    }
+  })
+  .catch(function(err) {
+    console.error(err);
+  });
