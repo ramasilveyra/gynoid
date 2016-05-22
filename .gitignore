@@ -2,6 +2,8 @@ lib/droids/gynoid/config.json
 
 node_modules
 
+droids/
+
 .env
 
 lib/droids/marvin-droid/
