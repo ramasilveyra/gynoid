@@ -21,8 +21,8 @@
     "async": "^2.0.0-rc.4",
     "bluebird": "^3.3.5",
     "nodegit": "^0.13.0",
-    "npm": "^2.15.5",
     "rimraf": "^2.5.2",
+    "semver": "^5.1.0",
     "slack-robot": "auth0/slack-robot"
   },
   "devDependencies": {
