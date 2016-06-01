@@ -9,5 +9,7 @@ node {
   
 
     stage 'Build'
+    sh "echo npm -v"
     sh "npm i"
+    
 }
