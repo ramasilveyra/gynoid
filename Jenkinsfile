@@ -1,13 +1,13 @@
 node {
     stage 'Checkout'
     // Checkout code from repository
-   checkout scm
+    checkout scm
    
-  def nodeHome = tool name: 'node-default'
-  sh "${nodeHome}/bin/node -v"
-  env.PATH = "${nodeHome}/bin:${env.PATH}"
+    def nodeHome = tool name: 'node-default'
+    sh "${nodeHome}/bin/node -v"
+    env.PATH = "${nodeHome}/bin:${env.PATH}"
+  
 
-   // Mark the code build 'stage'....
-   stage 'Build'
-   sh "npm i"
+    stage 'Build'
+    sh "npm i"
 }
