@@ -12,29 +12,30 @@ Additionally, generate a GitHub personal access token if you want to install dro
 
 1. Install dependencies
 
-  ```
+  ```sh
   npm install
   ```
 
 1. Create a configuration file: `/etc/gynoid.config.json` with the following setting:
 
-  ```
+  ```json
   {
     "keys": {
-      "GITHUB_TOKEN": "{personal-access-token}"
+      "GITHUB_TOKEN": "{personal-access-token}",
       "GYNOID_TOKEN": "{slack-token}"
     }
+  }
   ```
 
 1. Provide access to the configuration file so the user that runs the service can read and update the configuration
 
-  ```
+  ```sh
   sudo chown user: /etc/gynoid.config.json
   ```
 
 1. Run! The default droid "Gynoid" will be cloned from GitHub and start listening commands in Slack.
 
-  ```
+  ```sh
   node server.js
   ```
 
@@ -68,11 +69,7 @@ To create your own **Droid Extension** you need at least two files:
 
 See [Marvin Droid JSON](https://github.com/auth0/marvin-droid/blob/master/droid.json) and [Mandrill Droid Script](https://github.com/auth0/marvin-droid/blob/master/index.js) as samples.
 
-Once created, you can extend it using Gynoid in Slack:
-
-```
-
-```
+Once created, you can extend it using Gynoid in Slack (see section below).
 
 ## Extending Droids
 
