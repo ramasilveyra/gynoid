@@ -21,9 +21,10 @@ Additionally, generate a GitHub personal access token if you want to install dro
   ```
   {
     "keys": {
-      "GITHUB_TOKEN": "{personal-access-token}"
+      "GITHUB_TOKEN": "{personal-access-token}",
       "GYNOID_TOKEN": "{slack-token}"
     }
+  }
   ```
 
 1. Provide access to the configuration file so the user that runs the service can read and update the configuration
