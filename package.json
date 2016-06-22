@@ -1,6 +1,6 @@
 {
   "name": "gynoid",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "Auth0 NodeJs ChatOps Service",
   "main": "server.js",
   "scripts": {
