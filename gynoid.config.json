@@ -1,6 +1,6 @@
 {
   "keys": {
-    "GITHUB_TOKEN": "{your-personal-token}",
+    "GITHUB_TOKEN": "",
     "GYNOID_TOKEN": "{your-slack-bot-token}"
   }
 }
