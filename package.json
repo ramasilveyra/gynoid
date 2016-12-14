@@ -20,10 +20,10 @@
   "dependencies": {
     "async": "^2.0.0-rc.4",
     "bluebird": "^3.3.5",
-    "nodegit": "^0.13.0",
+    "nodegit": "^0.16.0",
     "rimraf": "^2.5.2",
     "semver": "^5.1.0",
-    "slack-robot": "auth0/slack-robot#v3.3.0"
+    "slack-robot": "auth0/slack-robot#v3.3.2"
   },
   "devDependencies": {
     "chai": "^3.5.0",
